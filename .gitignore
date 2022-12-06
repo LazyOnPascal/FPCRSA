@@ -30,8 +30,8 @@ lib/
 *.app/
 
 #Linux runable program
-FPCRSA_*
-test/unittestRSA*
+fpcrsatest
+fpcrsatest_debug
 
 #Test results
 test/TestResult*
@@ -39,8 +39,7 @@ test/TestResult*
 #Key data file
 *.rsa
 
-#Icons
-*.ico
-
 #Dolphins files
 .directory
+
+
