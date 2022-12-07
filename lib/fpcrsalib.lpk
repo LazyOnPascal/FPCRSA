@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <Name Value="fpcrsalib"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <SearchPaths>
+        <IncludeFiles Value="../source"/>
+        <OtherUnitFiles Value="../source"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/"/>
+      </SearchPaths>
+      <CodeGeneration>
+        <Optimizations>
+          <OptimizationLevel Value="4"/>
+        </Optimizations>
+      </CodeGeneration>
+    </CompilerOptions>
+    <Files>
+      <Item>
+        <Filename Value="../source/rsafunc.pas"/>
+        <UnitName Value="RSAFunc"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LockBox.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbUtils.pas"/>
+        <UnitName Value="LbUtils"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbString.pas"/>
+        <UnitName Value="LbString"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbRSA.pas"/>
+        <UnitName Value="LbRSA"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbRDL.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbRandom.pas"/>
+        <UnitName Value="LbRandom"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbProc.pas"/>
+        <UnitName Value="LbProc"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbConst.pas"/>
+        <UnitName Value="LbConst"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbClass.pas"/>
+        <UnitName Value="LbClass"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbCipher.pas"/>
+        <UnitName Value="LbCipher"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbBigInt.pas"/>
+        <UnitName Value="LbBigInt"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbBF.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/LbAsym.pas"/>
+        <UnitName Value="LbAsym"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="dcpcrypt"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>
