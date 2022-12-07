@@ -9,7 +9,7 @@ interface
 
 uses
   RSAFunc, LbUtils, LbString, LbRSA, LbRandom, LbProc, LbConst, LbClass, 
-  LbCipher, LbBigInt, LbAsym, LazarusPackageIntf;
+  LbCipher, LbBigInt, LbAsym, KeyList, LazarusPackageIntf;
 
 implementation
 

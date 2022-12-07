@@ -8,7 +8,7 @@
       <SearchPaths>
         <IncludeFiles Value="../source"/>
         <OtherUnitFiles Value="../source"/>
-        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/"/>
+        <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <CodeGeneration>
         <Optimizations>
@@ -72,6 +72,10 @@
       <Item>
         <Filename Value="../source/LbAsym.pas"/>
         <UnitName Value="LbAsym"/>
+      </Item>
+      <Item>
+        <Filename Value="../source/KeyList.pas"/>
+        <UnitName Value="KeyList"/>
       </Item>
     </Files>
     <RequiredPkgs>
