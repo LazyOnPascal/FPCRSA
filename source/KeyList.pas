@@ -24,7 +24,7 @@ type
     destructor Destroy; override;
 
     function Add(aRSA: TLbRSA): integer;
-    function CreateKey(aName: string; aKeySize: longint): integer;
+    function CreateKey(aName: string; aKeySize: TLbAsymKeySize): integer;
     procedure DeleteAndFree(Index: integer);
 
     function SaveAllKeysToStream(aDest: TStream; aEncription: boolean;
@@ -43,6 +43,8 @@ implementation
 
 uses
   RSAFunc;
+
+
 
 { TKeysList }
 
@@ -72,11 +74,11 @@ begin
   Result := inherited Add(aRSA);
 end;
 
-function TKeysList.CreateKey(aName: string; aKeySize: longint): integer;
+function TKeysList.CreateKey(aName: string; aKeySize: TLbAsymKeySize): integer;
 var
   LbRSA1: TLbRSA;
 begin
-  LbRSA1 := TLbRSA.Create(nil,aName,TLbAsymKeySize(aKeySize));
+  LbRSA1 := TLbRSA.Create(nil, aName, TLbAsymKeySize(aKeySize));
   LbRSA1.GenerateKeyPair;
   Exit(inherited Add(LbRSA1));
 end;
@@ -193,7 +195,7 @@ begin
   KeysInFile := Dest.ReadDWord;
   for i := 1 to KeysInFile do
   begin
-    newRSA := TLbRSA.Create(nil,'0',aks128);
+    newRSA := TLbRSA.Create(nil, '0', aks128);
     newRSA.KeySize := TLbAsymKeySize(Dest.ReadByte);
     newRSA.Name := Dest.ReadAnsiString;
     newRSA.PublicKey.ModulusAsString := Dest.ReadAnsiString;
