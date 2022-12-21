@@ -36,3 +36,5 @@ sDecoded := LbRSA1.DecryptString(sEncoded);
 //The exponent and the module of both keys can be obtained as a string, for example
 ModOfPrivateKey := LbRSA1.PrivateKey.ModulusAsString;
 ```
+
+Mail LazyOnPascal@proton.me
